@@ -11,7 +11,8 @@ class HomeScreen extends StatefulWidget {
 
 class HomeScreenState extends State<HomeScreen> {
   GoogleMapController? _mapController;
-  final LatLng _initialPosition = const LatLng(31.0409, 31.3785);
+  final LatLng _initialPosition =
+      const LatLng(31.033549911189926, 31.35610440380582);
   LatLng? _currentPosition;
   bool _locationPermissionGranted = false;
 
@@ -26,7 +27,6 @@ class HomeScreenState extends State<HomeScreen> {
     if (permission == LocationPermission.whileInUse ||
         permission == LocationPermission.always) {
       _locationPermissionGranted = true;
-      _getCurrentLocation();
     } else {
       _locationPermissionGranted = false;
     }
@@ -134,7 +134,7 @@ class HomeScreenState extends State<HomeScreen> {
           context,
           'صيدليه الطرشوبي',
           'نسعى لخدمة جميع عملائنا وتلبيه احتياجاتهم تحت شعار ✔️التميز هدفنا ✔️والأمانة',
-          ' ساعه24مفتوح',
+          'مفتوح',
           const LatLng(31.041418178050566, 31.36112030703073),
           '12:00 صباحًا',
           '11:00 مساءً',
